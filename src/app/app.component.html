@@ -1,0 +1,43 @@
+<!-- <h2>Welcome To Angular World</h2>
+<p>Name: {{ name }}</p>
+<p>Department:{{ dept }}</p>
+<p>Location: {{ location }}</p> -->
+
+<!-- ngFor Directive -->
+<!-- <div *ngFor="let r of rank">
+  <p>{{ r }}</p>
+</div> -->
+
+<!-- ngIf Directive -->
+<!-- <div *ngIf="working else elsepart">
+  <p style="color: rgb(35, 251, 2);">I'm Working</p>
+</div>
+<ng-template #elsepart>
+  <p style="color: red;">I'm Not Working</p>
+</ng-template> -->
+
+<!-- event binding -->
+ <!-- <button (click)="onClick('Student')">Click Me</button> -->
+
+<!-- <app-child
+[available]="getAvailable()"
+[notavailable]="getNotAvailable()"></app-child> -->
+ <!-- <div>
+  <p [ngStyle]="{color: 'red'}">Hello</p>
+ </div> -->
+
+
+ <app-child 
+ (onAvailableClick)="handleAvailableClick()",
+ (notAvailableClick)="handleNotAvailableClick()"></app-child>
+
+ <p>Hello</p>
+ <div *ngIf="show">
+  <p>Available Items</p>
+  <li *ngFor="let item of availableItems">{{ item.courseName }}</li>
+</div>
+
+<div *ngIf="!show">
+  <p>Not Available Items</p>
+  <li *ngFor="let item of notAvailableItems">{{ item.courseName }}</li>
+</div>
