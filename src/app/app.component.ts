@@ -21,19 +21,25 @@ export class AppComponent {
     {id: 5,courseName: 'MongoDB',type: 'Available'},
   ]    
 
-  availableItems=this.course.filter(course => course.type === 'Available');
-  notAvailableItems=this.course.filter(course => course.type === 'Not Available');
-  show:boolean=true;
+}
 
-  handleAvailableClick()
-  {
-    this.show=true;
-  }
 
-  handleNotAvailableClick()
-  {
-    this.show=false;
-  }
+  // availableItems=this.course.filter(course => course.type === 'Available');
+  // notAvailableItems=this.course.filter(course => course.type === 'Not Available');
+  // show:boolean |null =null;
+
+  // handleAvailableClick()
+  // {
+  //   // console.log(event);    
+  //   this.show=true;
+
+  // }
+
+  // handleNotAvailableClick()
+  // {
+  //   // console.log(event);    
+  //   this.show=false;
+  // }
   
   // getAvailable()
   // {
@@ -49,4 +55,3 @@ export class AppComponent {
   // {
   //   alert('Button Clicked By'+ this.name+" "+greet);
   // }
-}

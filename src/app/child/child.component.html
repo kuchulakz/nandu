@@ -1,2 +1,6 @@
-<button (click)="onAvailableClick()">Available</button>
-<button (click)="notAvailableClick()">Not Available</button>
+<!-- <button (click)="showAvailableClick()">Available</button>
+<button (click)="showNotAvailableClick()">Not Available</button> -->
+
+
+<input type="text" (keyup)="0" #text >
+<p>{{ text.value }}</p>

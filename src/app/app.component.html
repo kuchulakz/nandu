@@ -27,17 +27,19 @@
  </div> -->
 
 
- <app-child 
- (onAvailableClick)="handleAvailableClick()",
- (notAvailableClick)="handleNotAvailableClick()"></app-child>
+ <!-- <app-child 
+ (availableClick)="handleAvailableClick()"
+ (notavailableClick)="handleNotAvailableClick()"></app-child>
 
  <p>Hello</p>
- <div *ngIf="show">
+ <div *ngIf="show === true">
   <p>Available Items</p>
   <li *ngFor="let item of availableItems">{{ item.courseName }}</li>
 </div>
 
-<div *ngIf="!show">
+<div *ngIf="show === false">
   <p>Not Available Items</p>
   <li *ngFor="let item of notAvailableItems">{{ item.courseName }}</li>
-</div>
+</div> -->
+
+<app-child></app-child>

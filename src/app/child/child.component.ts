@@ -7,16 +7,20 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class ChildComponent 
 {
-  @Output() availableClick = new EventEmitter<void>()
-  @Output() notavailableClick = new EventEmitter<void>()
-
-  onAvailableClick()
-  {
-    this.availableClick.emit();
-  }
-
-  notAvailableClick()
-  {
-    this.notavailableClick.emit();
-  }
+  
 }
+
+// @Output() availableClick = new EventEmitter<void>()
+  // @Output() notavailableClick = new EventEmitter<void>()
+
+  // showAvailableClick()
+  // {
+  //   // console.log(event)
+  //   this.availableClick.emit();
+  // }
+
+  // showNotAvailableClick()
+  // {
+  //   // console.log(event)
+  //   this.notavailableClick.emit();
+  // }
