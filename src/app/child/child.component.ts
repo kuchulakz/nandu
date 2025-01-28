@@ -1,4 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { ServiceService } from '../service.service';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-child',
@@ -7,7 +9,18 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class ChildComponent 
 {
-  
+  text:string='Not Available';
+
+  t='Lexi'
+  notavailableClick()
+  {
+    const service= new ServiceService()
+    service.onButtonClicked(this.text)
+  }
+  msg()
+  {
+    
+  }
 }
 
 // @Output() availableClick = new EventEmitter<void>()

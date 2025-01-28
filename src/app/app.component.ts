@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title='demo1';
   name:string = 'Lexi';
   dept:string = 'IT';
@@ -20,7 +21,23 @@ export class AppComponent {
     {id: 4,courseName: 'Node',type: 'Not Available'},
     {id: 5,courseName: 'MongoDB',type: 'Available'},
   ]    
+text: string='iphone';
 
+  myObv= new Observable((observer)=>
+  {console.log("observable starts")
+  observer.next("1")
+  setTimeout(() => {observer.next("2")},1000)
+  setTimeout(() => {observer.next("3")},2000)
+  setTimeout(() => {observer.next("4")},4000)
+  })
+
+  ngOnInit(): void {
+    this.myObv.subscribe((val)=>
+    {
+      console.log(val);      
+    })
+  }
+  
 }
 
 
